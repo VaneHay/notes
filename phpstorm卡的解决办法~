@@ -1,0 +1,15 @@
+为什么调整内存？
+最近发现PHPstorm在打开一些大点的js, html文件时,会非常的卡顿,这个主要的原因是因为设置的内存过低造成的,按照下面设置后就不感觉卡顿了,一旦编辑包含 js html  的大文件，phpstorm 会出现卡顿，甚至 未响应，
+
+ 
+Mac OSX的调整方法 phpstorm 9 ,10 均适用,
+
+# 用的是 mac osx，编辑 phpstorm 的启动配置文件，其他平台根据情况选择:
+sudo vim /Applications/PhpStorm.app/Contents/bin/phpstorm.vmoptions
+
+# 修改参数，根据具体需要修改即可
+-Xms512m
+-Xmx2048m
+-XX:MaxPermSize=350m
+-XX:ReservedCodeCacheSize=240m
+-XX:+UseCompressedOops

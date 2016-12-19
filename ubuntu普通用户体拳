@@ -1,0 +1,4 @@
+最近在开发一个项目的时候，需要用到一个包（libpcap），利用这个包可以进行网络流的底层解析，可是要使用这个包进行网络嗅探的时候，需要使用root权限，经常使用sudo来运行很麻烦，最后为了方便项目的调试，于是就将自己的当前用户提升到root权限。
+       提升的方法如下：在shell里面输入  sudo gedit /etc/passwd   将里面的当前用户的ID值进行修改。譬如我的当前用户是chenjieb
+则找到了   chenjieb:x:1000:1000:Administrator,,,:/home.chenjieb:/bin/bash   将两个1000改成0即可。即最后改完的结果为：
+  chenjieb:x:0:0:Administrator,,,:/home.chenjieb:/bin/bash     最后将Ubuntu系统进行注销，然后在登陆的用户名里输入 你自己的用户名和密码，这样登陆上来就是root权限了。这是因为root的ID值为0。

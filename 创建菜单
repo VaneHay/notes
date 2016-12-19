@@ -1,0 +1,10 @@
+[Desktop Entry]  
+Encoding=UTF-8  
+Name=Eclipse Platfrom  
+Comment=Eclipse IDE  
+Exec=/home/lxc/java/eclipse/eclipse  
+Icon=/home/lxc/java/eclipse/icon.xpm  
+Terminal=false  
+StartupNotify=true  
+Type=Application  
+Categories=Application;Development;

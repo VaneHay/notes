@@ -1,0 +1,17 @@
+apt-get --purge remove nginx
+
+sudo apt-get --purge remove nginx 
+
+sudo apt-get autoremove 
+
+ sudo apt-get --purge remove nginx 
+
+sudo apt-get autoremove 
+
+dpkg --get- selections|grep nginx 
+
+nginx-common deinstall 
+
+sudo apt-get --purge remove nginx-common 
+
+ sudo apt-get install nginx 

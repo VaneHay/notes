@@ -1,0 +1,5 @@
+
+#查找进程
+ps -ef | grep samba   
+
+pkill php5-fpm

@@ -1,0 +1,22 @@
+1.figlet (http://www.figlet.org/)
+figlet也提供了n中样式，不过是靠字体文件来区分样式的，默认是标准字体
+figlet -f [font name] [text]
+apt-get install figlet
+echo "Hi Reboot" | figlet
+
+figlet -f [font name] [text]
+showfigfonts  查看所有字体
+
+linux下也有这样的工具了，它的名字叫aview。
+
+1. banner (https://github.com/uffejakobsen/sysvbanner)
+这个是最简单的，就一种样式，用#字符来画出你输入的字符组合。
+banner [text]
+
+aptitude install sysvbanner  ##debian/ubuntu
+
+
+3. boxes (http://boxes.thomasjensen.com/)
+提供了n种样式，例如各种动物等，然后你输入的字符就放在这些图案的内部空白处
+boxes -l 列出所有的样式
+echo [text] | boxes -d [style name] 用dog这个样式来显示   mouse

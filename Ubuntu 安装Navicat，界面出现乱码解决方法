@@ -1,0 +1,28 @@
+1、下载安装包，点击后面打链接可以下载，下载Navicat_premium安装包
+
+2、在终端进入安装包的文件，解压安装包
+
+<pre name="code" class="plain">sudo tar xzvf 安装包名
+
+进入解压后打文件夹，直接运行start_navicat 文件，即可安装使用Navicat，然后有可能出现界面乱码的情况。
+乱码解决方法（自己解决我自己这种情况之后打猜测）：
+
+打开start_navicat文件，会看到 export LANG="en_US.UTF-8" 将这句话改为 export LANG="zh_CN.UTF-8"。如果还没人解决可以在终端输入locale查看一下，我的显示
+
+LANG=zh_CN.UTF-8
+LANGUAGE=zh_CN:zh
+LC_CTYPE="zh_CN.UTF-8"
+LC_NUMERIC="zh_CN.UTF-8"
+LC_TIME="zh_CN.UTF-8"
+LC_COLLATE="zh_CN.UTF-8"
+LC_MONETARY="zh_CN.UTF-8"
+LC_MESSAGES="zh_CN.UTF-8"
+LC_PAPER="zh_CN.UTF-8"
+LC_NAME="zh_CN.UTF-8"
+LC_ADDRESS="zh_CN.UTF-8"
+LC_TELEPHONE="zh_CN.UTF-8"
+LC_MEASUREMENT="zh_CN.UTF-8"
+LC_IDENTIFICATION="zh_CN.UTF-8"
+LC_ALL=
+
+如果你的第一行不是LANG=zh_CN.UTF-8，可以尝试下 export LANG="en_US.UTF-8" 与 终端的第一行保持一致，应该可以解决乱码问题

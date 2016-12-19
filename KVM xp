@@ -1,0 +1,57 @@
+
+apt-get install qemu-kvm qemu uml-utilities libvirt-bin libvirt-dev  
+
+modprobe kvm_intel #or kvm_amd  
+
+
+qemu-img create -f qcow2 xp.img 30G
+
+
+kvm -no-acpi -m 512 -cdrom winxpsp2.iso -hda hda.img -boot d
+
+
+qemu -hda disk.img
+
+/media/vanehay/Elements/黑马hadoop视频教程全套
+
+http://blog.csdn.net/cenziboy/article/details/6957890
+
+
+
+在ubuntu系统下取消eth0的ip地址：
+
+首先注释/etc/network/interfaces eth0的相关配置后重启网络：
+sudo /etc/init.d/networking restart
+
+再用ifconfig来查看网络配置，eth0的配置依旧存在，再用ifdown来试试看
+sudo ifdown eth0
+提示：
+ifdown: interface eth0 not configured
+
+后来发现ifconfig down/up 命令可以生效：
+
+sudo ifconfig eth0 down
+sudo ifconfig eth1 up
+/etc/init.d/libvirt-bin start
+
+https://www.sysgeek.cn/install-kvm-ubuntu-15-04/
+http://www.open-open.com/lib/view/open1452245929808.html
+
+http://blog.csdn.net/dai451954706/article/details/47723801
+
+
+#kvm-img create disk.img 4G  #真实系统（非虚拟机中）可能是qemu-img命令  
+  
+#kvm -cdrom xp.iso -hda disk.img -boot d #无网络“开机”并从xp.iso启动，安装系统  
+或者使用下条命令联网安装系统，非dhcp需配置网络：IP，DNS，Gateway...   
+#kvm -cdrom xp.iso -hda disk.img -net nic,macaddr=00:00:00:00:00:01 -net tap,ifname=tap0,script=no,downscript=no -boot d 
+
+
+http://wiki.ubuntu.org.cn/Kvm%E6%95%99%E7%A8%8B
+
+
+http://www.cnblogs.com/ssslinppp/p/5893412.html
+
+
+
+http://download2.navicat.com/download/navicat100_mysql_en.tar.gz

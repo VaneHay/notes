@@ -1,0 +1,51 @@
+
+1.下载nodejs源码
+http://nodejs.org/
+http://nodejs.org/dist/v0.10.24/node-v0.10.24.tar.gz
+
+$ sudo apt-get install python 
+
+$ sudo apt-get install build-essential 
+
+$ sudo apt-get install gcc 
+
+$ sudo apt-get install g++ 
+
+2.解压安装包
+tar -zxf node-v0.10.24.tar.gz
+cd node-v0.10.22/
+
+3.编译并安装
+./configure –prefix=/opt/nodejs      #这里可以不指定目录，直接执行./configure命令也可以。
+make                                              #这里有些慢，需要耐心等待
+make install
+
+
+4.创建符号链接
+sudo ln -s /opt/nodejs/bin/node /usr/local/bin/
+sudo ln -s /opt/nodejs/bin/npm /usr/local/bin/
+
+
+你只需要执行以下命令:
+1.curl -L http://npmjs.org/install.sh | sh
+
+如果安装过程中出现了权限问题,那么需要在 root 权限下执行上面的语句,或者使用sudo。
+curl -L http://npmjs.org/install.sh | sudo sh
+
+先来npm config list一下试试 
+##切换淘宝的npm源
+npm config set registry " https://registry.npm.taobao.org "
+
+##安装cnpm
+sudo npm -g install cnpm
+sudo ln -s /opt/nodejs/bin/cnpm /usr/local/bin/
+
+即可使用
+node -v
+npm -v
+cnpm -v
+
+##参考网址：http://typecho.hainuo.info/archives/nodejs-cnpm.html
+http://www.tuicool.com/articles/UVR3qqA
+https://npm.taobao.org/
+

@@ -1,0 +1,2 @@
+dpkg -l firefox  查看已安装软件信息
+
