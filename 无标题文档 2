@@ -1,9 +1,17 @@
-http://www.weixinla.co
-m/document/31023239.html
 
+如果是github上的项目的话
+git remote add -f marquee-slide git@github.com:wange1228/marquee-slide.git
 
-https://linux.cn/article-3487-2.html
+git subtree add --prefix=plugins/marquee-slide marquee-slide master --squash
 
+git push -u origin master
 
-//php面向对象文档
-https://www.kancloud.cn/webxyl/php_oop/68874
+如果是本地的
+ 1973  git add hello.txt 
+ 1974  git commit -m "hello git"
+ 1975  git remote add origin git@github.com:VaneHay/test.git
+ 1976  git push -u origin master
+
+提交到原项目地址
+git subtree pull --prefix=plugins/marquee-slide marquee-slide master --squash
+git subtree push --prefix=plugins/bootstrap3-validation.js bootstrap3-validation.js master

@@ -1,0 +1,29 @@
+1968  mkdir test
+ 1969  cd test
+ 1970  ls
+ 1971  echo "hello git" >> hello.txt
+ 1972  git init
+ 1973  git add hello.txt 
+ 1974  git commit -m "hello git"
+ 1975  git remote add origin git@github.com:VaneHay/test.git
+ 1976  git push -u origin master
+ 1977  ls
+ 1978  git clone git@github.com:mrlong/bootstrap3-validation.js.git
+ 1979  ls
+ 1980  git iniit
+ 1981  git init
+ 1982  ls
+ 1983  git remote add origin git@github.com:VaneHay/test.git
+ 1984  git push -u origin master
+ 1985  ls -al
+ 1986  git --version
+ 1987  git remote add -f git@github.com:mrlong/bootstrap3-validation.js.git
+ 1988  git remote add -f bootstrap3-validation git@github.com:mrlong/bootstrap3-validation.js.git
+ 1989  ls
+ 1990  ls -al
+ 1991  git subtree add --prefix=bootstrap3-validation bootstrap3-validation master --squash
+ 1992  ls
+ 1993  git status
+ 1994  git push -u origin master
+ 1995  git status
+
